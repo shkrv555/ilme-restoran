@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon"  href="picture/rope.png"
+    <title>İlmə Restoran</title>
+    <style>
+        /* Başlangıç stili */
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #fff;
+            color: #800000;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #800000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        nav ul li ul {
+            display: none;
+            list-style-type: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #800000;
+            padding: 10px 0;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        .menu-section {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .menu-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #800000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .socials a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .socials a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobil uyumlu dizayn */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            nav ul li ul {
+                position: relative;
+                top: 0;
+            }
+
+            .menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-section h2 {
+                text-align: center;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+
+        /* Button for mobile menu toggle */
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+            }
+
+            .menu-toggle {
+                display: block;
+                background-color: #800000;
+                color: white;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            nav ul.show {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">İlmə Restoran</div>
+        <div class="menu-toggle" onclick="toggleMenu()">Menyu</div>
+        <nav>
+            <ul id="menuList">
+                <li><a href="#menu">Menu</a>
+                    <ul>
+                        <li><a href="#menu1">Burger</a></li>
+                        <li><a href="#menu2">Sandwich</a></li>
+                        <li><a href="#menu3">Salad</a></li>
+                        <li><a href="#menu4">Qəlyanaltı</a></li>
+                        <li><a href="#menu5">Set</a></li>
+                        <li><a href="#menu6">İçkilər</a></li>
+                        <li><a href="#menu7">Boşqab yeməkləri</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Xoş Gəldiniz</h1>
+            <p>İlmə Restoranına xos gəldiniz! Sizi ləziz yeməklər və keyfiyyətli xidmət gözləyir.</p>
+        </section>
+
+        <section id="menu">
+            <div id="menu1" class="menu-section">
+                <h2>Burgerlər</h2>
+                <div class="menu-items">
+                    <div class="item"><img src="picture/chicken.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Chicken Burger</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/beef.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Beef Burger</li><li>5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Chesse Burger</li><li>5.8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Didmə Burger</li><li>6    ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Bud Burger</li><li>6 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Fajitas Toyuq</li><li>6.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Fajitas Beef</li><li>7.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Mix Burger</li><li>7.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Double Beef</li><li>8.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Mega Chesse</li><li>9 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Ləvəngi Burger</li><li>10 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Bastırma Burger</li><li>11 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Can Əti Krivetka</li><li>12 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Steak Burger</li><li>12 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Mega Beef</li><li>15 ₼</li></ul></div>
+                    <!-- Daha çox elementlər -->
+                </div>
+            </div>
+            <div id="menu2" class="menu-section">
+                <h2>Sandwich</h2>
+                <div class="menu-items">
+                    <div class="item"><img src="picture/vetcina.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Vetiçina Sandwich</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/toyuqpendir.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Toyuqlu Pendirli</li><li>4.8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Didmə Toyuq</li><li>5.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Napolitana Sosis</li><li>5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/sandwic.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Can Əti Sandwich</li><li>5.9 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Qavyaddin Sandwich</li><li>8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/club.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Club sandwich</li><li>7 ₼</li></ul></div>
+                    <div class="item"><img src="picture/buritto.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Buritto sandwich</li><li>7 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Kübar sandwich</li><li>7.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Austrian sandwich</li><li>7.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Quesadilla</li><li>8₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Poştet</li><li>8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Tuna</li><li>9 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Salmon</li><li>10 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Steak Sandwich</li><li>15 ₼</li></ul></div>
+                    <!-- Daha çox elementlər -->
+                </div>
+            </div>
+            <h2>Salad</h2>
+                <div class="menu-items">
+                    <div class="item"><img src="picture/yunan.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Yunan Salatı</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/touq qargidali.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Toyuq Qarğıdalı Salatı</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/xircilti.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Sezar Toyuq salat</li><li>5.3 ₼</li></ul></div>
+                    <div class="item"><img src="picture/xircilti.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Xırçıldayan Badımcan Salatı</li><li>5.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>İsti Ət salatı</li><li>5.8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Pamidor Salatı</li><li>6 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Gürcü salatı</li><li>7 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Krab Salatı</li><li>8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Suxari Toyuq Salatı</li><li>7 ₼</li></ul></div>
+                    <div class="item"><img src="picture/elabaliq.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Tuna Salatı</li><li>9 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Sezar salmon</li><li>8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Sezar krvetka</li><li>8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Qızılbalıq Salat</li><li>9 ₼</li></ul></div>
+                    <!-- Daha çox elementlər -->
+                </div>
+            </div>
+            <div id="menu2" class="menu-section">
+                <h2>Qəlyanaltı</h2>
+                <div class="menu-items">
+                    <div class="item"><img src="picture/fri.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Fri</li><li>3 ₼</li></ul></div>
+                    <div class="item"><img src="picture/fri.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Ev sayağı kartof</li><li>3 ₼</li></ul></div>
+                    <div class="item"><img src="picture/qelyantoyuq.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Pendir Çubuqları</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Nagets</li><li>4.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/kajun.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Kajun Toyuq</li><li>4.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/strips.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Toyuq qanad (4ədəd)</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Toyuq bud (2ədəd)</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Sigara Börəyi (4 ədəd)</li><li>3 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Blinçik (2 ədəd)</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/elabaliq.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Paştet (3 dilim)</li><li>4 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Tako tərəvəz</li><li>6 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Tako toyuqlu</li><li>6 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Tako Ətli</li><li>8 ₼</li></ul></div>
+                </div>
+            </div>
+            <h2>Set</h2>
+                <div class="menu-items">
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Sandwich set</li><li>15 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Kombo set</li><li>18.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Mexico set</li><li>20 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Didmə toyuq set</li><li>22  ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Beef set</li><li>24 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Tələbə set</li><li>4.5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Trio Set</li><li>30 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Family Set</li><li>40 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Steak set</li><li>50₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Ekanom set</li><li>5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Tost set</li><li>6  ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Qarışıq set</li><li>7,5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Şirin set</li><li>8 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Double set</li><li>17  ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Family</li><li>25 ₼</li></ul></div>
+                    <!-- Daha çox elementlər -->
+                </div>
+            </div>
+            <div id="menu2" class="menu-section">
+                <h2>İçkilər</h2>
+                <div class="menu-items">
+                    <div class="item"><img src="img3.jpg" alt="Menyu 2" class="menu-image"><ul><li>Yemək 3</li><li>13 AZN</li></ul></div>
+                    <div class="item"><img src="img4.jpg" alt="Menyu 2" class="menu-image"><ul><li>Yemək 4</li><li>13 AZN</li></ul></div>
+                    <!-- Daha çox elementlər -->
+                </div>
+            </div>
+            <h2>İsti yeməklər </h2>
+                <div class="menu-items">
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Sosis Fri</li><li>5 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Langet</li><li>8  ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Şnitsel</li><li>9 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Göbələk Toyuq</li><li>10 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Pendirli Toyuq</li><li>12 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Leonardo</li><li>12 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Toyuq budu</li><li>13 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Köftə</li><li>13 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Monastır</li><li>14 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Fajitas toyuq</li><li>13 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Fajitas ət</li><li>15 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Steak krvetka</li><li>20 ₼</li></ul></div>
+                    <div class="item"><img src="picture/EMPTY.jpeg" alt="Menyu 1" class="menu-image"><ul><li>Steak</li><li>20 ₼</li></ul></div>
+                    <!-- Daha çox elementlər -->
+                </div>
+            </div>
+           
+            </div>
+            <!-- Digər menyular burada əlavə ediləcək -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Əlaqə məlumatları: +994 99 800 48 68</p>
+        <div class="socials">
+            <a href="https://l.instagram.com/?u=https%3A%2F%2Fwolt.com%2Faz%2Faze%2Fganja%2Frestaurant%2Filme-coffee-sandwich-ganja%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaZ0roq1D8IfXKzFJspvOn4IEc-pMo4U4PVY1xreYDwUaO4RJfWvsgRzlGM_aem_3b6igRZhp8W-YeYQFB9bdw&e=AT0jGsoTati4IH0Tj7ngz4hAVGnhR46s26nOuzKqSGJK8CiytChAsMab4JZuU9V0LGXmsg6T_-3T7VvfHBQT6QVgaqK1xCSK5uLe-g">WOLT</a>
+            <a href="https://www.instagram.com/ilme_coffee_sandwich?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">INSTAGRAM</a>
+            <a href="https://maps.app.goo.gl/XPFe7eqEC5VUQjXMA">LOCATION</a>
+        </div>
+    </footer>
+
+    <script>
+        // Menyu açılmasını idarə edən funksiya (mobil üçün)
+        function toggleMenu() {
+            const menu = document.getElementById('menuList');
+            menu.classList.toggle('show');
+        }
+
+        // Şəkillərin ölçüsünü avtomatik olaraq uyğunlaşdırmaq üçün funksiya
+        window.addEventListener("load", function() {
+            const images = document.querySelectorAll('.menu-image');
+            images.forEach(image => {
+                image.style.maxWidth = "100%";
+                image.style.height = "auto";
+            });
+        });
+    </script>
+</body>
+</html>
